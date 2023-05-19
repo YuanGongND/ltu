@@ -1,6 +1,6 @@
 # Listen, Think, and Understand
 
-**[[Paper]](https://arxiv.org/abs/2305.10790)** **[[Interactive Demo]]()**
+**[[Paper]](https://arxiv.org/abs/2305.10790)** **[[Interactive Demo]](https://c941ef60cc8ce23153.gradio.live/)**
 
 <p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/ltu.png?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
 
