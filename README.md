@@ -3,7 +3,7 @@
 
 <p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/usage.gif?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
 
-**[[Paper]](https://arxiv.org/abs/2305.10790)** **[[Interactive Demo]](https://6cce5a1315f5023ded.gradio.live)** **[[中文互动性演示]](https://eb0579d805511f5498.gradio.live)**
+**[[Paper]](https://arxiv.org/abs/2305.10790)** **[[Interactive Demo]](https://0746bf2d0092d432c2.gradio.live)** **[[中文互动性演示]](https://3e5f4ba9bee58e896a.gradio.live)**
 
 **Authors:** [Yuan Gong](https://yuangongnd.github.io/), [Hongyin Luo](https://luohongyin.github.io/), [Alexander H. Liu](https://alexander-h-liu.github.io/), [Leonid Karlinsky](https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/), and [James Glass](https://people.csail.mit.edu/jrg/) (MIT & MIT-IBM Watson AI Lab)
 
