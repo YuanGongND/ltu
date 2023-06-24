@@ -13,5 +13,6 @@ The ability of artificial intelligence (AI) systems to perceive and comprehend a
 
 In this paper, we propose a novel audio foundation model, called LTU (Listen, Think, and Understand). To train LTU, we created a new OpenAQA-5M dataset consisting of 1.9 million closed-ended and 3.7 million open-ended, diverse (audio, question, answer) tuples, and used an autoregressive training framework and a perception-to-understanding curriculum. LTU demonstrates strong performance and generalization ability on conventional audio tasks such as classification and captioning. Moreover, it exhibits remarkable reasoning and comprehension abilities in the audio domain. To the best of our knowledge, LTU is the first audio-enabled large language model that bridges audio perception with advanced reasoning.
 
+
 **How about the code?**
 We plan to release the code but our institute needs to review the software release, we are working on preparing for the review. 
