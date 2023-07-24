@@ -3,7 +3,7 @@
 
 <p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/usage.gif?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
 
-**LTU-2 Beta: [[Interactive Demo]](https://7ad96bac1b8d6cfbee.gradio.live)** (This model is currently under construction and subject to change rapidly.)
+**LTU-2 Beta: [[Interactive Demo]](https://4d0b5755a3c7a9f518.gradio.live)** (This model is currently under construction and subject to change rapidly.)
 
 **LTU: [[Paper]](https://arxiv.org/abs/2305.10790)**  **[[Interactive Demo]](https://ec6306f98320dacc1c.gradio.live)**
 
