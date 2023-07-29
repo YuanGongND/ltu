@@ -5,7 +5,7 @@
 
 **LTU-2 (Beta):**
 
-**[[Interactive Demo]](https://8e11f97ef373b9cf10.gradio.live)** (This is an improved version of LTU, the model is currently under construction and subject to change rapidly.)
+**[[Interactive Demo]](https://3146f809b6de487cb9.gradio.live)** (This is an improved version of LTU, the model is currently under construction and subject to change rapidly.)
 
 **LTU:**
 
