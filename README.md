@@ -5,11 +5,11 @@
 
 **LTU-2 (Beta):**
 
-**[[Interactive Demo]](https://3146f809b6de487cb9.gradio.live)** (This is an improved version of LTU, the model is currently under construction and subject to change rapidly.)
+**[[Interactive Demo]](https://7f8240b16ca5a8a576.gradio.live/)** (This is an improved version of LTU, the model is currently under construction and subject to change rapidly.)
 
 **LTU:**
 
-**[[Paper]](https://arxiv.org/abs/2305.10790)**  **[[Interactive Demo]](https://3c3fba6dc83741dbbd.gradio.live)**
+**[[Paper]](https://arxiv.org/abs/2305.10790)**  **[[Interactive Demo]](https://72d7ccfee58aeb541a.gradio.live)**
 
 **Authors:** [Yuan Gong](https://yuangongnd.github.io/), [Hongyin Luo](https://luohongyin.github.io/), [Alexander H. Liu](https://alexander-h-liu.github.io/), [Leonid Karlinsky](https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/), and [James Glass](https://people.csail.mit.edu/jrg/) (MIT & MIT-IBM Watson AI Lab)
 
