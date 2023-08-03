@@ -5,7 +5,7 @@
 
 **LTU-2 (Beta):**
 
-**[[Interactive Demo]](https://7f8240b16ca5a8a576.gradio.live/)** (This is an improved version of LTU, the model is currently under construction and subject to change rapidly.)
+**[[Interactive Demo]](https://32fd8a6221984fe693.gradio.live/)** (Have a try on our most advanced audio large language model.)
 
 **LTU:**
 
