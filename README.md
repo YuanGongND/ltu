@@ -5,11 +5,11 @@
 
 **LTU-2 (Beta):**
 
-**[[Interactive Demo]](https://32fd8a6221984fe693.gradio.live/)** (Have a try on our most advanced audio large language model.)
+**[[Interactive Demo]](https://0da75a362bdc250593.gradio.live)** (Have a try on our most advanced audio large language model.)
 
 **LTU:**
 
-**[[Paper]](https://arxiv.org/abs/2305.10790)**  **[[Interactive Demo]](https://72d7ccfee58aeb541a.gradio.live)**
+**[[Paper]](https://arxiv.org/abs/2305.10790)**  **[[Interactive Demo]](https://0bdb6ec85665b5d745.gradio.live)**
 
 **Authors:** [Yuan Gong](https://yuangongnd.github.io/), [Hongyin Luo](https://luohongyin.github.io/), [Alexander H. Liu](https://alexander-h-liu.github.io/), [Leonid Karlinsky](https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/), and [James Glass](https://people.csail.mit.edu/jrg/) (MIT & MIT-IBM Watson AI Lab)
 
