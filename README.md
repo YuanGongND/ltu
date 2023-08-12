@@ -5,7 +5,7 @@
 
 **LTU-2 (Beta):**
 
-**[[Interactive Demo]](https://0da75a362bdc250593.gradio.live)** (Have a try on our most advanced audio large language model.)
+**[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** (Have a try on our most advanced audio large language model.)
 
 **LTU:**
 
