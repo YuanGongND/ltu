@@ -9,7 +9,7 @@
 
 **LTU:**
 
-**[[Paper]](https://arxiv.org/abs/2305.10790)**  **[[Interactive Demo]](https://c968df703dd9d54c88.gradio.live)**
+**[[Paper]](https://arxiv.org/abs/2305.10790)**  **[[Interactive Demo]](https://6654419aa961b664df.gradio.live)**
 
 **Authors:** [Yuan Gong](https://yuangongnd.github.io/), [Hongyin Luo](https://luohongyin.github.io/), [Alexander H. Liu](https://alexander-h-liu.github.io/), [Leonid Karlinsky](https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/), and [James Glass](https://people.csail.mit.edu/jrg/) (MIT & MIT-IBM Watson AI Lab)
 
