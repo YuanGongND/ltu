@@ -3,9 +3,9 @@
 
 <p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/usage.gif?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
 
-**LTU-2 (Beta):**
+**LTU-AS:**
 
-**[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** (Have a try on our most advanced audio large language model.)
+**[[Paper]](https://github.com/YuanGongND/yuangongnd.github.io/blob/master/gong_asru2023.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** (Have a try on our most advanced audio large language model.)
 
 **LTU:**
 
