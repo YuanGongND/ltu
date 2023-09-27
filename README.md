@@ -5,7 +5,7 @@
 
 **LTU-AS:**
 
-**[[Paper]](https://github.com/YuanGongND/yuangongnd.github.io/blob/master/gong_asru2023.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** (Have a try on our most advanced audio large language model.)
+**[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]]** **[[ASRU Peer Review]](https://arxiv.org/pdf/2309.14405.pdf)**
 
 **LTU:**
 
