@@ -3,11 +3,11 @@
 
 <p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/usage.gif?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
 
-**LTU-AS:**
+**LTU-AS (Second Generation):**
 
-**[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]]** **[[ASRU Peer Review]](https://arxiv.org/pdf/2309.14405.pdf)**
+**[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** **[[ASRU Peer Review]](https://arxiv.org/pdf/2309.14405.pdf)**
 
-**LTU:**
+**LTU (First Generation):**
 
 **[[Paper]](https://arxiv.org/abs/2305.10790)**  **[[Interactive Demo]](https://18c618fc8f07ec494e.gradio.live)**
 
