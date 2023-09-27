@@ -5,7 +5,7 @@
 
 **LTU-AS (Second Generation):**
 
-**[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** **[[ASRU Peer Review]](https://arxiv.org/pdf/2309.14405.pdf)**
+**[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** **[[ASRU Peer Review]](https://github.com/YuanGongND/ltu/tree/main/asru_review)**
 
 **LTU (First Generation):**
 
