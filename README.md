@@ -9,7 +9,7 @@
 
 *LTU-AS was accepted at ASRU 2023. See you in Taipei!*
 
-**[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** **[[ASRU Peer Review]](https://github.com/YuanGongND/ltu/tree/main/asru_review)**
+**[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** **[[ASRU Peer Review]](https://github.com/YuanGongND/ltu/tree/main/asru_review)** **[[Compare LTU-1 and LTU-AS]](https://huggingface.co/spaces/yuangongfdu/LTU-Compare)**
 
 **Authors:** [Yuan Gong](https://yuangongnd.github.io/), [Alexander H. Liu](https://alexander-h-liu.github.io/), [Hongyin Luo](https://luohongyin.github.io/), [Leonid Karlinsky](https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/), and [James Glass](https://people.csail.mit.edu/jrg/) (MIT & MIT-IBM Watson AI Lab)
 
