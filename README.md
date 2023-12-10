@@ -1,11 +1,10 @@
 # Listen, Think, and Understand
-<p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/ltu.png?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
 
 <p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/usage.gif?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
 
 ---
 
-**LTU-AS (Second Generation):**
+**LTU-AS (Second Generation, Supports Speech and Audio):**
 
 *LTU-AS was accepted at ASRU 2023. See you in Taipei!*
 
@@ -13,21 +12,273 @@
 
 **Authors:** [Yuan Gong](https://yuangongnd.github.io/), [Alexander H. Liu](https://alexander-h-liu.github.io/), [Hongyin Luo](https://luohongyin.github.io/), [Leonid Karlinsky](https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/), and [James Glass](https://people.csail.mit.edu/jrg/) (MIT & MIT-IBM Watson AI Lab)
 
+BibTeX:
+
+```  
+@inproceedings{gong_ltuas,
+  title={Joint Audio and Speech Understanding},
+  author={Gong, Yuan and Liu, Alexander H and Luo, Hongyin and Karlinsky, Leonid and Glass, James},
+  year={2023},
+  booktitle={2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+}
+```  
+
 ---
 
-**LTU (First Generation):**
+**LTU (First Generation, Only Supports Audio):**
 
 **[[Paper]](https://arxiv.org/abs/2305.10790)**  **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/LTU)**
 
 **Authors:** [Yuan Gong](https://yuangongnd.github.io/), [Hongyin Luo](https://luohongyin.github.io/), [Alexander H. Liu](https://alexander-h-liu.github.io/), [Leonid Karlinsky](https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/), and [James Glass](https://people.csail.mit.edu/jrg/) (MIT & MIT-IBM Watson AI Lab)
 
+BibTeX:
+
+```  
+@article{gong2023listen,
+  title={Listen, Think, and Understand},
+  author={Gong, Yuan and Luo, Hongyin and Liu, Alexander H and Karlinsky, Leonid and Glass, James},
+  journal={arXiv preprint arXiv:2305.10790},
+  year={2023}
+}
+```  
+
+---
+## OpenAQA (LTU) and OpenASQA (LTU-AS) Dataset
+
+We release the training data for OpenAQA and OpenASQA. Specifically, we release the (`question`, `answer`, `audio_id`) tuples.
+The actual audio wav files are from existing public datasets and need to be downloaded by the users. 
+We provide full dataset (including all AQAs) as well as breakdowns (closed-ended and open-ended subsets, subsets of each original dataset, etc). All links are host on Dropbox and support `wget`.
+
+**Toy Set (Contains Raw Audio Files, for Testing Purpose Only)**:
+
+
+**OpenAQA Training (Only Audio Datasets, 5.6M AQAs in Total)**:
+
+Full Dataset (2.3GB): [Download](https://www.dropbox.com/scl/fo/iip9zxdt693esl8db3vkq/h?rlkey=nlesigkgjz106uwv448s7bxlh&dl=1)
+
+Breakdown Subsets:  [Download](https://www.dropbox.com/scl/fo/iip9zxdt693esl8db3vkq/h?rlkey=nlesigkgjz106uwv448s7bxlh&dl=1)
+
+**OpenASQA Training (Audio and Speech Datasets, 10.2M AQAs in Total)**:
+
+Full Dataset (4.6GB): [Download](https://www.dropbox.com/scl/fo/nvn2k1wrmgjz4wglcs9zy/h?rlkey=2l4lz83d90swlooxizn26uubp&dl=1)
+
+Breakdown Subsets: [Download](https://www.dropbox.com/scl/fo/nvn2k1wrmgjz4wglcs9zy/h?rlkey=2l4lz83d90swlooxizn26uubp&dl=1)
+
+**LTU Evaluation Data**
+
+[Download](https://www.dropbox.com/scl/fo/juh1dk9ltvhghuj0l1sag/h?rlkey=0n2cd5kebzh8slwanjzrfn7q6&dl=1)
+
+**LTU-AS Evaluation Data**
+
+[Download](https://www.dropbox.com/scl/fo/o91k6cnwqft84tgmuotwg/h?rlkey=6bnjobvrbqbt4rqt3f1tgaeb8&dl=1)
+
+**When prepare audio files, please make sure all audio files use a same sampling rate of 16kHz.**
+
+The format of the dataset is a json file of a list of dict, in the following format:
+
+```json
+[
+ {
+  "instruction": "What is the significance of the sound of crying in this audio clip?", % the question
+  "input": "I am so sad...", % the speech content
+  "audio_id": "/data/sls/audioset/dave_version/audio/LZq4Neh-oWU.flac", % the audio id
+  "dataset": "as_strong_train", % the original dataset
+  "task": "open-ended question", % question type
+  "output": "The sound of crying suggests that there is a sad or emotional situation happening in the audio clip." % the answer
+ },
+  ...
+]
+```
+
 ---
 
-**Abstract:** 
+## Set the virtual environment
 
-The ability of artificial intelligence (AI) systems to perceive and comprehend audio signals is crucial for many applications. Although significant progress has been made in this area since the development of AudioSet, most existing models are designed to map audio inputs to pre-defined, discrete sound label sets. In contrast, humans possess the ability to not only classify sounds into coarse-grained categories, but also to listen to the details of the sounds, explain the reason for the predictions, think what the sound infers, and understand the scene and what action needs to be taken. Such capabilities beyond perception are not yet present in existing audio models. On the other hand, modern large language models (LLMs) exhibit emerging reasoning ability but they lack audio perception capabilities. Therefore, we ask the question: can we build an AI model that has both audio perception and a reasoning ability?
+For almost all usages, you would need to set a virtual environment. 
+Note LTU and LTU-AS needs different environments. Their `hf-dev` and `peft-main` are different. 
 
-In this paper, we propose a novel audio foundation model, called LTU (Listen, Think, and Understand). To train LTU, we created a new OpenAQA-5M dataset consisting of 1.9 million closed-ended and 3.7 million open-ended, diverse (audio, question, answer) tuples, and used an autoregressive training framework and a perception-to-understanding curriculum. LTU demonstrates strong performance and generalization ability on conventional audio tasks such as classification and captioning. Moreover, it exhibits remarkable reasoning and comprehension abilities in the audio domain. To the best of our knowledge, LTU is the first audio-enabled large language model that bridges audio perception with advanced reasoning.
+For LTU:
 
-**How about the code?**
-We plan to release the code but our institute needs to review the software release, we are working on preparing for the review. 
+```bash
+cd /ltu/src/ltu
+conda create --name venv_ltu python=3.10
+conda activate venv_ltu
+pip install -r requirements.txt
+# install customerized huggingface transformer, original transformer won't work
+pip install -e hf-dev/transformers-main
+# install customerized huggingface peft, original peft won't work
+pip install -e peft-main
+```
+
+For LTU-AS:
+
+```bash
+cd /ltu/src/ltu_as
+conda create --name venv_ltu_as python=3.10
+conda activate venv_ltu_as
+# install customerized huggingface transformer, original transformer won't work
+pip install -e hf-dev/transformers-main
+# install customerized huggingface peft, original peft won't work
+pip install -e peft-main/
+# install customerized openai-whisper, original whisper won't work 
+pip install -e whisper/
+```
+
+## Inference 
+
+For all users, even you are only interested in training/finetuning, we suggest to start with running inference. This would help debugging. 
+The bash scripts will automatically download default LTU/LTU-AS models, you do not need to do it by yourself.
+`inference_gradio.py` can be run on cpu or gpu.
+
+**For LTU:**
+
+```bash
+conda activate venv_ltu
+cd ltu/src/ltu
+./inference_gradio.py
+```
+The script may output some warnings which can be ignored. After the script finishs, it will provide a gradio link for inference, which can be run on a browser of any machine. You can also modify the script to run it on local terminal.
+
+We also provide batch inference script `inference_batch.py`
+
+**For LTU-AS:**
+
+```bash
+conda activate venv_ltu_as
+cd ltu/src/ltu_as
+./inference_gradio.py
+```
+
+The script may output some warnings which can be ignored. After the script finishs, it will provide a gradio link for inference, which can be run on a browser of any machine.
+
+We also provide batch inference script `inference_batch.py`, note this script loads pre-extracted whisper features, rather than raw wav files. 
+If you want to use raw audio file, please use `inference_gradio.py`.
+
+*GPU Issue: We find that Open-AI whisper features are different on different GPUs, which impacts the performance of LTU-AS as it takes Whisper feature as input. In the paper, we always use feature generated by old GPUs (Titan-X). But we do release a checkpoint that uses feature generated by newer GPUs (A5000/A6000), please manually switch the checkpoint if you are running on newer GPUs. Mismatch of training and inference GPU does not totally destroy the model, but would cause a performance drop.
+
+## Finetune the Model with Toy Data
+
+We do not provide raw audio files for OpenAQA and OpenASQA due to copyright reasons. However, for easy reproduction, we provide audio files and Whisper audio features for a small sample set. 
+Specifically, we very simple, almost one-click script to finetune the model. Once success, you can change the toy data to your own data.
+
+For both scripts:
+- You do not need to download the toy data, `prep_train.sh` will do this for you.
+- You do not need to download the pretrained model, `prep_train.sh` will download the default pretrained model. However, you can change which pretrained model to use in `finetune_toy.sh`.
+
+**For LTU:**
+
+```bash
+conda activate venv_ltu
+# this path matters, many code requires relative path
+cd ltu/src/ltu/train_script
+# allow script executable
+chmod 777 *
+# prepare toy data and pretrained models
+./prep_train.sh
+# run finetuning on the data
+./finetune_toy.sh
+```
+
+**For LTU-AS:**
+
+```bash
+conda activate venv_ltu_as
+# this path matters, many code requires relative path
+cd ltu/src/ltu_as/train_script
+# allow script executable
+chmod 777 *
+# prepare toy data and pretrained models
+./prep_train.sh
+# run finetuning on the data
+./finetune_toy.sh
+```
+
+
+**Finetune on LTU model with your own data**
+
+For LTU, it is simple, you just need to replace `--data_path '../../../openaqa/data/openaqa_toy_relative.json'` in `finetune_toy.sh` to your own data. Note please make sure your own audios are 16kHz, absolute paths are encouraged, we use relative path just for simple one-click sample. 
+
+For LTU-AS, it is a bit more complex, our script does not load raw audio, but pre-extracted Whisper-features, so you would also need to first extract Whisper features for your own audio, and then change the code in HF transformer package to point to your dir for Whisper feature. 
+
+## Reproduce LTU and LTU-AS Training
+
+We suggest you first try a toy data finetuning then do this. 
+
+This is similar to finetuning, the difference is that both LTU and LTU-AS training are multi-stage curriculum, so you would need to start from stage 1, and then stage 2, ....
+For stage 2, you would need to change `--base_model 'your_path_to_mdl/pytorch_model.bin'` to the checkpoint of trained model in stage 1. And so on so forth.
+
+**For LTU:**
+```bash
+conda activate venv_ltu
+# this path matters, many code requires relative path
+cd ltu/src/ltu/train_script
+# allow script executable
+chmod 777 *
+# prepare toy data and pretrained models
+./prep_train.sh
+# run finetuning on the data
+./stage1_proj_cla.sh
+./stage2_all_cla.sh
+./stage3_all_close.sh
+./stage4_all_mix.sh
+```
+
+**For LTU-AS:**
+
+```bash
+conda activate venv_ltu_as
+# this path matters, many code requires relative path
+cd ltu/src/ltu_as/train_script
+# allow script executable
+chmod 777 *
+# prepare toy data and pretrained models
+./prep_train.sh
+# run finetuning on the data
+./finetune_toy.sh
+./stage1_proj_cla.sh
+./stage2_all_cla.sh
+./stage4_all_mix_v2.sh
+```
+
+## Pretrained Models
+
+For most above applications, our script handles model download (so you do not need to do it by yourself), but we do provide more checkpoints.
+
+Other models mentioned in the paper may be also available upon request, please create an github issue to ask.
+
+| LTU Model                          	                         | Size 	| Train Seq Length 	| Train Steps 	|  Whisper Feature GPU  	| Not Answerable Questions 	|                                                            Link   	                                                            |
+|--------------------------------------------------------------|:----:	|:----------------:	|:-----------:	|:---------------------:	|:------------------------:	|:------------------------------------------------------------------------------------------------------------------------------:|
+| Original in Paper (Default)                 	                | 370M 	|        108       	|    20000    	|           -           	|         Included         	|   [Download](https://www.dropbox.com/scl/fi/ir69ci3bhf4cthxnnnl76/ltu_ori_paper.bin?rlkey=zgqin9hh1nn2ua39jictcdhil&dl=1) 	    |
+| Full-Finetuned (include LLM Parameters)                    	 |  27G 	|        108       	|    20000    	|           -           	|         Included         	| [Download](https://www.dropbox.com/scl/fi/m9ypar9aydlec5i635zl2/full_ft_2e-5_20000.bin?rlkey=jxv8poda31exdja0r777mtfbd&dl=1) 	 |
+
+| LTU Model                          	         | Size 	| Train Seq Length 	| Train Steps 	|  Whisper Feature GPU  	| Not Answerable Questions 	|                                                                  Link   	                                                                   |
+|----------------------------------------------|:----:	|:----------------:	|:-----------:	|:---------------------:	|:------------------------:	|:-------------------------------------------------------------------------------------------------------------------------------------------:|
+| Original in Paper                  	         | 200M 	|        108       	|    40000    	|    Old GPUs (Titan)   	|         Included         	|         [Download](https://www.dropbox.com/scl/fi/34y1p8bfuwlcdepwd2e1o/ltuas_ori_paper.bin?rlkey=um20nlxzng1nig9o4ib2difoo&dl=1) 	         |
+| Long_sequence_exclude_noqa_old_gpu 	         | 200M 	|        192       	|    40000    	|    Old GPUs (Titan)   	|         Excluded         	|     [Download](https://www.dropbox.com/scl/fi/co2m4ljyxym7f3w3dl6u4/ltuas_long_noqa_old_gpu.bin?rlkey=23sxa0f6l98wbci4t67y0se7v&dl=1) 	     |
+| Long_sequence_exclude_noqa_new_gpu (Default)	 | 200M 	|        192       	|    40000    	| New GPUs (A5000/6000) 	|         Excluded         	|       [Download](https://www.dropbox.com/scl/fi/ryoqai0ayt45k07ib71yt/ltuas_long_noqa_a6.bin?rlkey=1ivttmj8uorf63dptbdd6qb2i&dl=1) 	        |
+| Full-Finetuned (include LLM Parameters)      |  27G 	|        192       	|    40000    	|    Old GPUs (Titan)   	|         Excluded         	| [Download](https://www.dropbox.com/scl/fi/iq1fwkgkzueugqioge83g/ltuas_long_noqa_old_gpus_fullft.bin?rlkey=yac3gbjp6fbjy446qtblmht0w&dl=1) 	 |
+
+## Contact
+If you have a question, please bring up an issue, I usually respond promptly, if delayed, please ping me. 
+For more personal or confidential request, please send me an email [yuangong@mit.edu](yuangong@mit.edu).
+
+[//]: # ()
+[//]: # (## Important Code)
+
+[//]: # ()
+[//]: # (data collector)
+
+[//]: # ()
+[//]: # (model definition )
+
+[//]: # ()
+[//]: # (generation )
+
+[//]: # ()
+[//]: # (evaluation code )
+
+[//]: # ()
+[//]: # (GPT data generation)
+
+[//]: # ()
+[//]: # (whisper feature extraction )
