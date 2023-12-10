@@ -2,14 +2,21 @@
 - [Introduction](#introduction)
 - [Citation](#citation)
 - [OpenAQA (LTU) and OpenASQA (LTU-AS) Dataset](#openaqa-ltu-and-openasqa-ltu-as-dataset)
+   * [OpenAQA (LTU)](#for-ltu-openaqa)
+   * [OpenASQA (LTU-AS)](#for-ltu-as-openasqa)
 - [Set the Virtual Environment](#set-the-virtual-environment)
 - [Inference ](#inference)
+   * [Option 1. Inference via HuggingFace Space (No Code Needed)](#option-1-inference-via-huggingface-space-no-code-needed)
+   * [Option 2. Inference with API (No GPU Needed)](#option-2-inference-with-api-no-gpu-needed)
+   * [Option 3. Local Inference](#option-3-local-inference)
 - [Finetune LTU and LTU-AS](#finetune-ltu-and-ltu-as)
    * [Finetune the LTU/LTU-AS Model with Toy Data](#finetune-the-ltultu-as-model-with-toy-data)
    * [Finetune the LTU/LTU-AS Model with Your Own Data](#finetune-the-ltultu-as-model-with-your-own-data)
 - [Reproduce LTU and LTU-AS Training](#reproduce-ltu-and-ltu-as-training)
 - [Pretrained Models](#pretrained-models)
-- [Contact](#contact)
+- [Important Code](#important-code)
+- [Required Computational Resources](#required-computational-resources)
+- [Mirror Links](#mirror-links)
 ---
 ## Introduction
 
@@ -243,7 +250,7 @@ If you want to use raw audio file, please use `inference_gradio.py`. For how to 
 
 ## Finetune LTU and LTU-AS
 
-### 1. Finetune the LTU/LTU-AS Model with Toy Data
+### Finetune the LTU/LTU-AS Model with Toy Data
 
 We do not provide raw audio files for OpenAQA and OpenASQA due to copyright reasons. However, for easy reproduction, we provide audio files and Whisper audio features for a small sample set (toy set). 
 Specifically, we provide very simple, almost one-click script to finetune the model. Once success, you can change the toy data to your own data.
@@ -344,7 +351,7 @@ chmod 777 *
 ./finetune_toy.sh
 ./stage1_proj_cla.sh
 ./stage2_all_cla.sh # need to specify the checkpoint in stage 1 training
-./stage4_all_mix_v2.sh # need to specify the checkpoint in stage 3 training
+./stage4_all_mix_v2.sh # need to specify the checkpoint in stage 2 training
 ```
 
 ## Pretrained Models
@@ -385,9 +392,9 @@ If you have a question about the code, please create an issue.
 
 ## Required Computational Resources
 
-For LTU/LTU-AS training, we use 4 X A6000 (4 X 48GB=196GB VRAM). The code can be run on 1 X A6000 (or similar GPUs). To run on smaller GPUs, turn on model parallelism, we were able to run it on 4 X A5000 (4 X 24GB = 96GB) for LTU-AS (as Whisper takes some memory).
+For LTU/LTU-AS training, we use 4 X A6000 (4 X 48GB=196GB VRAM). The code can be run on 1 X A6000 (or similar GPUs). To run on smaller GPUs, turn on model parallelism, we were able to run it on 4 X A5000 (4 X 24GB = 96GB).
 
-For inference, the minimal would be 2 X TitanX (2 X 12GB = 24GB) for LTU and 4 X TitanX (4 X 12GB = 48GB). However, you can run inference on CPUs.
+For inference, the minimal would be 2 X TitanX (2 X 12GB = 24GB) for LTU and 4 X TitanX (4 X 12GB = 48GB) for LTU-AS (as Whisper takes some memory). However, you can run inference on CPUs.
 
 ## Mirror Links
 
