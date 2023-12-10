@@ -4,6 +4,19 @@
 
 ---
 
+- [Citation](#citation)
+- [OpenAQA (LTU) and OpenASQA (LTU-AS) Dataset](#openaqa-ltu-and-openasqa-ltu-as-dataset)
+- [Set the Virtual Environment](#set-the-virtual-environment)
+- [Inference ](#inference)
+- [Finetune the Model with Toy Data](#finetune-the-model-with-toy-data)
+- [Reproduce LTU and LTU-AS Training](#reproduce-ltu-and-ltu-as-training)
+- [Pretrained Models](#pretrained-models)
+- [Contact](#contact)
+
+<!-- TOC end -->
+
+## Citation
+
 **LTU-AS (Second Generation, Supports Speech and Audio):**
 
 *LTU-AS was accepted at ASRU 2023. See you in Taipei!*
