@@ -142,7 +142,9 @@ pip install -e whisper/
 
 ## Inference 
 
-For all users, even you are only interested in training/finetuning, we suggest to start with running inference. This would help debugging. 
+We provide code-free API inference at  [[LTU]](https://huggingface.co/spaces/yuangongfdu/LTU) and [[LTU-AS Inference]](https://huggingface.co/spaces/yuangongfdu/ltu-2). Both support batch inference with API (see the buttom in the bottom of the page).
+
+For local implementation, for all users, even you are only interested in training/finetuning, we suggest to start with running inference. This would help debugging. 
 The bash scripts will automatically download default LTU/LTU-AS models, you do not need to do it by yourself.
 `inference_gradio.py` can be run on cpu or gpu.
 
