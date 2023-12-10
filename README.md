@@ -13,6 +13,8 @@
 ---
 ## Introduction
 
+<p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/ltu.png?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
+
 This repository contains the official implementation (in PyTorch), pretrained checkpoints, and datasets of LTU and LTU-AS. 
 LTU and LTU-AS are first generation of audio and speech large language models that bridges audio perception with understanding.
 They not only achieve SOTA on multiple closed-ended audio and speech tasks, but can answer any question based on the given audio. 
