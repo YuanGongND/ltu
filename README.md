@@ -197,7 +197,7 @@ chmod 777 *
 ```
 
 
-**Finetune on LTU model with your own data**
+**Finetune on LTU/LTU-AS Model**
 
 For LTU, it is simple, you just need to replace `--data_path '../../../openaqa/data/openaqa_toy_relative.json'` in `finetune_toy.sh` to your own data. Note please make sure your own audios are 16kHz, absolute paths are encouraged, we use relative path just for simple one-click sample. 
 
