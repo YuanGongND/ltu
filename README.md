@@ -51,6 +51,9 @@ We provide full dataset (including all AQAs) as well as breakdowns (closed-ended
 
 **Toy Set (Contains Raw Audio Files, for Testing Purpose Only)**:
 
+For LTU: [Meta](https://www.dropbox.com/scl/fi/3g2b9dzeklunqwjs4ae05/openaqa_toy.json?rlkey=1a7gjjtjrvvpbnucur8wq46vr&dl=1) [Audio](https://www.dropbox.com/scl/fo/jdlkm9ggj3ascp2g8oehk/h?rlkey=tuh31ii3dpyg70zoaaxtllx3a&dl=1)
+
+For LTU-AS: [Meta](https://www.dropbox.com/scl/fi/63szdwo0mv519o4nmgvd3/openasqa_toy.json?rlkey=coch9fc1hwyor8ezxx1bf5d9b&dl=1) [Audio and Whisper Feature](https://www.dropbox.com/scl/fo/ko9qykuwbe4nodtsx8vl4/h?rlkey=nxaslb9f9g8j8k82xfxsf86ls&dl=1)
 
 **OpenAQA Training (Only Audio Datasets, 5.6M AQAs in Total)**:
 
