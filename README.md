@@ -64,15 +64,15 @@ Please try the interactive demos to see how good they are!
 ---
 ## OpenAQA (LTU) and OpenASQA (LTU-AS) Dataset
 
-We release the training data for OpenAQA and OpenASQA. Specifically, we release the (`question`, `answer`, `audio_id`) tuples.
+We release the training data for LTU (OpenAQA) and LTU-AS (OpenASQA). Specifically, we release the (`question`, `answer`, `audio_id`) tuples.
 The actual audio wav files are from existing public datasets and need to be downloaded by the users. 
 We provide full dataset (including all AQAs) as well as breakdowns (closed-ended and open-ended subsets, subsets of each original dataset, etc). All links are host on Dropbox and support `wget`.
+
+### For LTU (OpenAQA)
 
 **Toy Set (Contains Raw Audio Files, for Testing Purpose Only)**:
 
 For LTU: [[Meta]](https://www.dropbox.com/scl/fi/3g2b9dzeklunqwjs4ae05/openaqa_toy.json?rlkey=1a7gjjtjrvvpbnucur8wq46vr&dl=1) [[Audio]](https://www.dropbox.com/scl/fo/jdlkm9ggj3ascp2g8oehk/h?rlkey=tuh31ii3dpyg70zoaaxtllx3a&dl=1)
-
-For LTU-AS: [[Meta]](https://www.dropbox.com/scl/fi/63szdwo0mv519o4nmgvd3/openasqa_toy.json?rlkey=coch9fc1hwyor8ezxx1bf5d9b&dl=1) [[Audio and Whisper Feature]](https://www.dropbox.com/scl/fo/ko9qykuwbe4nodtsx8vl4/h?rlkey=nxaslb9f9g8j8k82xfxsf86ls&dl=1)
 
 **OpenAQA Training (Only Audio Datasets, 5.6M AQAs in Total)**:
 
@@ -80,18 +80,22 @@ Full Dataset (2.3GB): [[Download]](https://www.dropbox.com/scl/fi/4k64am7ha8gy2o
 
 Breakdown Subsets:  [[Download]](https://www.dropbox.com/scl/fo/iip9zxdt693esl8db3vkq/h?rlkey=nlesigkgjz106uwv448s7bxlh&dl=1)
 
+**LTU Evaluation Data**: 
+[[Download]](https://www.dropbox.com/scl/fo/juh1dk9ltvhghuj0l1sag/h?rlkey=0n2cd5kebzh8slwanjzrfn7q6&dl=1)
+
+### For LTU-AS (OpenASQA)
+
+**Toy Set (Contains Raw Audio Files, for Testing Purpose Only)**:
+
+For LTU-AS: [[Meta]](https://www.dropbox.com/scl/fi/63szdwo0mv519o4nmgvd3/openasqa_toy.json?rlkey=coch9fc1hwyor8ezxx1bf5d9b&dl=1) [[Audio and Whisper Feature]](https://www.dropbox.com/scl/fo/ko9qykuwbe4nodtsx8vl4/h?rlkey=nxaslb9f9g8j8k82xfxsf86ls&dl=1)
+
 **OpenASQA Training (Audio and Speech Datasets, 10.2M AQAs in Total)**:
 
 Full Dataset (4.6GB): [[Download]](https://www.dropbox.com/scl/fi/nsnjivql7vb1i7vcf37d1/openasqa_10.3M_v2.json?rlkey=hy9xmbkaorqdlf72xmir1exe7&dl=1)
 
 Breakdown Subsets: [[Download]](https://www.dropbox.com/scl/fo/nvn2k1wrmgjz4wglcs9zy/h?rlkey=2l4lz83d90swlooxizn26uubp&dl=1)
 
-**LTU Evaluation Data**
-
-[[Download]](https://www.dropbox.com/scl/fo/juh1dk9ltvhghuj0l1sag/h?rlkey=0n2cd5kebzh8slwanjzrfn7q6&dl=1)
-
-**LTU-AS Evaluation Data**
-
+**LTU-AS Evaluation Data**: 
 [[Download]](https://www.dropbox.com/scl/fo/o91k6cnwqft84tgmuotwg/h?rlkey=6bnjobvrbqbt4rqt3f1tgaeb8&dl=1)
 
 **When prepare audio files, please make sure all audio files use a same sampling rate of 16kHz.**
@@ -117,12 +121,14 @@ The format of the dataset is a json file of a list of dict, in the following for
 ## Set the Virtual Environment
 
 For almost all usages, you would need to set a virtual environment. 
-Note LTU and LTU-AS needs different environments. Their `hf-dev` and `peft-main` are different. 
+Note LTU and LTU-AS needs different environments. Their `hf-dev` and `peft-main` are different. **Please do not mix use the venvs of LTU and LTU-AS.**
+
+Clone or download this repository as `ltu-main`, then,
 
 For LTU:
 
 ```bash
-cd /ltu/src/ltu
+cd /ltu-main/src/ltu
 conda create --name venv_ltu python=3.10
 conda activate venv_ltu
 pip install -r requirements.txt
@@ -135,7 +141,7 @@ pip install -e peft-main
 For LTU-AS:
 
 ```bash
-cd /ltu/src/ltu_as
+cd /ltu-main/src/ltu_as
 conda create --name venv_ltu_as python=3.10
 conda activate venv_ltu_as
 # install customerized huggingface transformer, original transformer won't work
