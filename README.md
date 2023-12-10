@@ -385,9 +385,13 @@ If you have a question about the code, please create an issue.
 
 ## Required Computational Resources
 
-For LTU/LTU-AS training, we use 4 X A6000 (4 X 48GB=196GB VRAM). The code can be run on 1 X A6000 (or similar GPUs). To run on smaller GPUs, turn on model parallelism, we were able to run it on 4 X A5000 (4 X 24GB = 96GB).
+For LTU/LTU-AS training, we use 4 X A6000 (4 X 48GB=196GB VRAM). The code can be run on 1 X A6000 (or similar GPUs). To run on smaller GPUs, turn on model parallelism, we were able to run it on 4 X A5000 (4 X 24GB = 96GB) for LTU-AS (as Whisper takes some memory).
 
 For inference, the minimal would be 2 X TitanX (2 X 12GB = 24GB) for LTU and 4 X TitanX (4 X 12GB = 48GB). However, you can run inference on CPUs.
+
+## Mirror Links
+
+All resources are hosted on Dropbox support `wget` and should be available for most countries/areas. For those who cannot access Dropbox, A VPN is recommended in this case, but we do provide a mirror link at [Tencent Cloud 腾讯微云](https://share.weiyun.com/ee7k45lH), however, you would need to manually place the model/data in to desired place, our automatic script will fail. 
 
 ## Contact
 If you have a question, please create an issue, I usually respond promptly, if delayed, please ping me. 
