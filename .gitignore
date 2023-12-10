@@ -11,5 +11,4 @@ old/*
 *.pptx
 *.bin
 *.pt
-pretrained_mdls/*
 old/*
