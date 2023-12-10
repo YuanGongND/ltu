@@ -54,13 +54,13 @@ We provide full dataset (including all AQAs) as well as breakdowns (closed-ended
 
 **OpenAQA Training (Only Audio Datasets, 5.6M AQAs in Total)**:
 
-Full Dataset (2.3GB): [Download](https://www.dropbox.com/scl/fo/iip9zxdt693esl8db3vkq/h?rlkey=nlesigkgjz106uwv448s7bxlh&dl=1)
+Full Dataset (2.3GB): [Download](https://www.dropbox.com/scl/fi/4k64am7ha8gy2ojl1t29e/openaqa_5.6M.json?rlkey=hqhg6bly8kbqqm09l1735ke0f&dl=1)
 
 Breakdown Subsets:  [Download](https://www.dropbox.com/scl/fo/iip9zxdt693esl8db3vkq/h?rlkey=nlesigkgjz106uwv448s7bxlh&dl=1)
 
 **OpenASQA Training (Audio and Speech Datasets, 10.2M AQAs in Total)**:
 
-Full Dataset (4.6GB): [Download](https://www.dropbox.com/scl/fo/nvn2k1wrmgjz4wglcs9zy/h?rlkey=2l4lz83d90swlooxizn26uubp&dl=1)
+Full Dataset (4.6GB): [Download](https://www.dropbox.com/scl/fi/nsnjivql7vb1i7vcf37d1/openasqa_10.3M_v2.json?rlkey=hy9xmbkaorqdlf72xmir1exe7&dl=1)
 
 Breakdown Subsets: [Download](https://www.dropbox.com/scl/fo/nvn2k1wrmgjz4wglcs9zy/h?rlkey=2l4lz83d90swlooxizn26uubp&dl=1)
 
