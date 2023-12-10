@@ -2,7 +2,7 @@
 
 # prep data
 URL="https://www.dropbox.com/scl/fo/wb5jry8tcl1vb5cd04zwd/h?rlkey=qv2s7uq7t15s3mojmpaqmjkee&dl=1"
-TARGET_DIR="../../../openaqa_test/data/"
+TARGET_DIR="../../../openaqa/data/"
 mkdir -p "$TARGET_DIR"
 TEMP_ZIP="downloaded_file.zip"
 wget -O "$TEMP_ZIP" "$URL"

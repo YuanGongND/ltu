@@ -2,7 +2,7 @@
 
 # prep data
 URL="https://www.dropbox.com/scl/fo/q5mwyy7r2x9qljaqg9hjk/h?rlkey=ksxyk509s9fvr9lxx225o0qqg&dl=1"
-TARGET_DIR="../../../openasqa_test/data/"
+TARGET_DIR="../../../openasqa/data/"
 mkdir -p "$TARGET_DIR"
 TEMP_ZIP="downloaded_file.zip"
 wget -O "$TEMP_ZIP" "$URL"

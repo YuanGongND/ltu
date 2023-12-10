@@ -160,7 +160,7 @@ pip install -e whisper/
 
 We provide three options for inference.
 
-### 1. Inference via HuggingFace Space (No Code Needed)
+### Option 1. Inference via HuggingFace Space (No Code Needed)
 
 <p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/usage.gif?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
 
@@ -168,7 +168,7 @@ We provide three options for inference.
 
 [**[LTU-AS Interactive Demo]**](https://huggingface.co/spaces/yuangongfdu/ltu-2)
 
-### 2. Inference with API (No GPU Needed)
+### Option 2. Inference with API (No GPU Needed)
 
 API supports batch inference with a simple for loop.
 
@@ -207,7 +207,7 @@ result = client.predict(
 print(result)
 ```
 
-### 3. Local Inference
+### Option 3. Local Inference
 
 For users interested in training/finetuning, we suggest to start with running inference. This would help debugging. 
 The bash scripts will automatically download default LTU/LTU-AS models, you do not need to do it by yourself.
@@ -266,6 +266,16 @@ chmod 777 *
 ./finetune_toy.sh
 ```
 
+You should get something similar as 
+
+```
+trainable params: 93065216 || all params: 6831480832 || trainable%: 1.3622993065290356
+Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 6306/6306 [00:02<00:00, 2626.08 examples/s]
+{'loss': 0.6383, 'learning_rate': 1e-05, 'epoch': 0.41}                                                                                               
+{'loss': 0.6052, 'learning_rate': 2e-05, 'epoch': 0.81}                                                                                               
+{'train_runtime': 142.0142, 'train_samples_per_second': 44.404, 'train_steps_per_second': 0.169, 'train_loss': 0.6136090755462646, 'epoch': 0.97}    
+```
+
 **For LTU-AS:**
 
 ```bash
@@ -280,6 +290,16 @@ chmod 777 *
 ./finetune_toy.sh
 ```
 
+You should get something like:
+
+```
+trainable params: 48793600 || all params: 6787209216 || trainable%: 0.718905200166442
+Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 8769/8769 [00:04<00:00, 2088.17 examples/s]
+{'loss': 0.6029, 'learning_rate': 2e-05, 'epoch': 0.29}                                                                                               
+{'loss': 0.5805, 'learning_rate': 4e-05, 'epoch': 0.58}                                                                                               
+{'loss': 0.5397, 'learning_rate': 6e-05, 'epoch': 0.87}                                                                                               
+{'train_runtime': 175.7491, 'train_samples_per_second': 49.895, 'train_steps_per_second': 0.193, 'train_loss': 0.5713561913546394, 'epoch': 0.99} 
+```
 
 ### Finetune the LTU/LTU-AS Model with Your Own Data
 
@@ -355,10 +375,19 @@ This is a large code base, and we are unable to explain the code one by one. Bel
 4. The closed-ended evaluation codes for LTU and LTU-AS are in [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu/eval) and [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu_as/eval), respectively.
 5. The GPT-assisted data generation code for LTU and LTU-AS are in [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu/qa_generation) and [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu_as/qa_generation), respectively.
 6. The Whisper-feature extraction code for LTU-AS is in [here](https://github.com/YuanGongND/ltu/blob/main/src/ltu_as/extract_whisper_feature.py).
-7. The training scripts with our hyperparameters for each stage for LTU and LTU-AS are in [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu/train_scripts) and [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu_as/train_scripts), respectively.
-8. The finetuning script for LTU and LTU-AS are in [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu/train_scripts) and [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu_as/train_scripts), respectively.
+7. The training shell scripts with our hyperparameters for each stage for LTU and LTU-AS are in [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu/train_scripts) and [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu_as/train_scripts), respectively.
+8. The finetuning python script (which will be called by the above shell scripts) for LTU and LTU-AS are in [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu/train_scripts) and [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu_as/train_scripts), respectively.
+
+For training, the start point is the training shell scripts at [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu/train_scripts) and [here](https://github.com/YuanGongND/ltu/tree/main/src/ltu_as/train_scripts),
+these shell scripts will call `ltu-main/{ltu,ltu_as}/finetune.py`, which will call the customerized huggingface transformer which contains the LTU/LTU-AS model and peft package.
 
 If you have a question about the code, please create an issue.
+
+## Required Computational Resources
+
+For LTU/LTU-AS training, we use 4 X A6000 (4 X 48GB=196GB VRAM). The code can be run on 1 X A6000 (or similar GPUs). To run on smaller GPUs, turn on model parallelism, we were able to run it on 4 X A5000 (4 X 24GB = 96GB).
+
+For inference, the minimal would be 2 X TitanX (2 X 12GB = 24GB) for LTU and 4 X TitanX (4 X 12GB = 48GB). However, you can run inference on CPUs.
 
 ## Contact
 If you have a question, please create an issue, I usually respond promptly, if delayed, please ping me. 
