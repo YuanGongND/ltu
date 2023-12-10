@@ -95,7 +95,7 @@ The format of the dataset is a json file of a list of dict, in the following for
 
 ---
 
-## Set the virtual environment
+## Set the Virtual Environment
 
 For almost all usages, you would need to set a virtual environment. 
 Note LTU and LTU-AS needs different environments. Their `hf-dev` and `peft-main` are different. 
@@ -196,8 +196,7 @@ chmod 777 *
 ./finetune_toy.sh
 ```
 
-
-**Finetune on LTU/LTU-AS Model**
+**Finetune the LTU/LTU-AS Model**
 
 For LTU, it is simple, you just need to replace `--data_path '../../../openaqa/data/openaqa_toy_relative.json'` in `finetune_toy.sh` to your own data. Note please make sure your own audios are 16kHz, absolute paths are encouraged, we use relative path just for simple one-click sample. 
 
