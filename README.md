@@ -269,7 +269,7 @@ chmod 777 *
 
 For most above applications, our script handles model download (so you do not need to do it by yourself), but we do provide more checkpoints.
 
-Other models mentioned in the paper may be also available upon request, please create an github issue to ask.
+Other models mentioned in the paper may be provided upon request, please create an github issue to ask.
 
 | LTU Model                          	                         | Size 	| Train Seq Length 	| Train Steps 	|  Whisper Feature GPU  	| Not Answerable Questions 	|                                                            Link   	                                                            |
 |--------------------------------------------------------------|:----:	|:----------------:	|:-----------:	|:---------------------:	|:------------------------:	|:------------------------------------------------------------------------------------------------------------------------------:|
