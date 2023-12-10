@@ -1,8 +1,5 @@
 # Listen, Think, and Understand
 
-<p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/usage.gif?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
-
----
 
 - [Citation](#citation)
 - [OpenAQA (LTU) and OpenASQA (LTU-AS) Dataset](#openaqa-ltu-and-openasqa-ltu-as-dataset)
@@ -13,8 +10,19 @@
 - [Pretrained Models](#pretrained-models)
 - [Contact](#contact)
 
-<!-- TOC end -->
+---
+## Introduction
 
+This repository contains the official implementation (in PyTorch), pretrained checkpoints, and datasets of LTU and LTU-AS. 
+LTU and LTU-AS are first generation of audio and speech large language models that bridges audio perception with understanding.
+They not only achieve SOTA on multiple closed-ended audio and speech tasks, but can answer any question based on the given audio. 
+Please try the interactive demos to see how good they are! 
+
+[**[LTU Interactive Demo]**](https://huggingface.co/spaces/yuangongfdu/LTU) 
+
+[**[LTU-AS Interactive Demo]**](https://huggingface.co/spaces/yuangongfdu/ltu-2)
+
+---
 ## Citation
 
 **LTU-AS (Second Generation, Supports Speech and Audio):**
@@ -142,7 +150,9 @@ pip install -e whisper/
 
 ## Inference 
 
-We provide code-free API inference at  [[LTU]](https://huggingface.co/spaces/yuangongfdu/LTU) and [[LTU-AS Inference]](https://huggingface.co/spaces/yuangongfdu/ltu-2). Both support batch inference with API (see the buttom in the bottom of the page).
+We provide code-free API inference at [[LTU Inference]](https://huggingface.co/spaces/yuangongfdu/LTU) and [[LTU-AS Inference]](https://huggingface.co/spaces/yuangongfdu/ltu-2). Both support batch inference with API (see the buttom in the bottom of the page).
+
+<p align="center"><img src="https://github.com/YuanGongND/ltu/blob/main/usage.gif?raw=true" alt="Illustration of CAV-MAE." width="900"/></p>
 
 For local implementation, for all users, even you are only interested in training/finetuning, we suggest to start with running inference. This would help debugging. 
 The bash scripts will automatically download default LTU/LTU-AS models, you do not need to do it by yourself.
