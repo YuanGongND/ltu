@@ -29,7 +29,7 @@ Please try the interactive demos to see how good they are!
 
 [**[LTU Interactive Demo]**](https://huggingface.co/spaces/yuangongfdu/LTU)
 
-[**[LTU-AS Interactive Demo]**](https://huggingface.co/spaces/yuangongfdu/ltu-2) (currently down due to MIT server issue)
+[**[LTU-AS Interactive Demo]**](https://huggingface.co/spaces/yuangongfdu/ltu-2)
 
 ---
 ## Citation
