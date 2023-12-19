@@ -36,7 +36,7 @@ whisper_text_model = whisper_at.load_model("large-v2", device='cuda:1')
 
 def load_whisper():
     mdl_size = 'large-v1'
-    checkpoint_path = '/data/sls/scratch/yuangong/whisper-a/src/{:s}.pt'.format(mdl_size)
+    checkpoint_path = '../../pretrained_mdls/{:s}.pt'.format(mdl_size)
     checkpoint = torch.load(checkpoint_path, map_location='cuda:0')
     dims = ModelDimensions(**checkpoint["dims"])
     whisper_feat_model = Whisper(dims)

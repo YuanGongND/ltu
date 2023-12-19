@@ -120,4 +120,12 @@ wget -O download.zip "$FILE_URL"
 unzip -n download.zip -d ../../eval_data/  # -n option to not overwrite existing files
 rm download.zip
 
+DEST_FILE="../../pretrained_mdls/large-v1.pt"
+
+if [ ! -f "$DEST_FILE" ]; then
+    wget -O "$DEST_FILE" "https://www.dropbox.com/scl/fi/r7sfa5y2kh7nc8lpmdv9a/large-v1.pt?rlkey=ffc8abmxjy69vxairb336mkhq&dl=1"
+else
+    echo "File already exists: $DEST_FILE"
+fi
+
 python inference_gradio.py
