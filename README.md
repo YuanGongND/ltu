@@ -27,7 +27,7 @@ LTU and LTU-AS are the first generation of audio and speech large language model
 They not only achieve SOTA on multiple closed-ended audio and speech tasks, but also can answer any open-ended question based on the given audio. 
 Please try the interactive demos to see how good they are!
 
-[**[LTU Interactive Demo]**](https://huggingface.co/spaces/yuangongfdu/LTU) (currently down due to MIT server issue)
+[**[LTU Interactive Demo]**](https://huggingface.co/spaces/yuangongfdu/LTU)
 
 [**[LTU-AS Interactive Demo]**](https://huggingface.co/spaces/yuangongfdu/ltu-2) (currently down due to MIT server issue)
 
