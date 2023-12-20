@@ -36,7 +36,7 @@ Please try the interactive demos to see how good they are!
 
 **LTU-AS (Second Generation, Supports Speech and Audio):**
 
-*LTU-AS was accepted at ASRU 2023. See you in Taipei!*
+*LTU-AS was accepted at ASRU 2023 (top 3% paper). See you in Taipei!*
 
 **[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** **[[ASRU Peer Review]](https://github.com/YuanGongND/ltu/tree/main/asru_review)** **[[Compare LTU-1 and LTU-AS]](https://huggingface.co/spaces/yuangongfdu/LTU-Compare)**
 
