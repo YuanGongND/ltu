@@ -38,3 +38,10 @@ python ../finetune_low_resource.py \
     --trainable_params all
 
 pkill -f wandb
+
+# should see something likt this
+#{'loss': 0.6051, 'learning_rate': 2e-05, 'epoch': 0.29}
+#{'loss': 0.5754, 'learning_rate': 4e-05, 'epoch': 0.58}
+#{'loss': 0.5488, 'learning_rate': 6e-05, 'epoch': 0.88}
+#{'train_runtime': 2219.2005, 'train_samples_per_second': 3.951, 'train_steps_per_second': 0.015, 'train_loss': 0.5715190382564769, 'epoch': 0.99}
+#100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 34/34 [36:48<00:00, 64.95s/it]
