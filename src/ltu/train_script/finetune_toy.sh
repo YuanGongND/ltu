@@ -34,6 +34,3 @@ torchrun --nproc_per_node=4 --master_port=1234 ../finetune.py \
     --wandb_run_name ${output_dir} \
     --save_steps 10 \
     --trainable_params all
-
-# use a smaller micro_batch_size to fit smaller gpus
-# you would need to prepare the audio by yourself

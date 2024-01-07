@@ -37,6 +37,3 @@ python ../finetune_low_resource.py \
     --wandb_run_name ${output_dir} \
     --save_steps 10 \
     --trainable_params all
-
-# use a smaller micro_batch_size to fit smaller gpus
-# you would need to prepare the audio by yourself

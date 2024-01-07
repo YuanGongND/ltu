@@ -39,7 +39,7 @@ python ../finetune_low_resource.py \
 
 pkill -f wandb
 
-# should see something likt this
+# should see something like this
 #{'loss': 0.6051, 'learning_rate': 2e-05, 'epoch': 0.29}
 #{'loss': 0.5754, 'learning_rate': 4e-05, 'epoch': 0.58}
 #{'loss': 0.5488, 'learning_rate': 6e-05, 'epoch': 0.88}
