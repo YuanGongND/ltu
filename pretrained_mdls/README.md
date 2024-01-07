@@ -33,7 +33,7 @@ Including Stage 1/2/3 checkpoints, for the final stage3 checkpoint, provide v1 a
 
 **2. LLaMA 13B Models (including 13B model script)**
 
-Our papers mostly focus on LLaMA-7B models, but we provide LLaMA-13B checkpoints. You would need to replace the model script [For LTU](https://github.com/YuanGongND/ltu/blob/main/src/ltu/hf-dev/transformers-main/src/transformers/models/llama/modeling_llama.py) and [For LTU-AS](https://github.com/YuanGongND/ltu/blob/main/src/ltu_as/hf-dev/transformers-main/src/transformers/models/llama/modeling_llama.py) with the 13B versions, which can be downloaded with the following links.
+Our papers mostly focus on LLaMA-7B models, but we provide LLaMA-13B checkpoints. You would need to replace the model script [For LTU](https://github.com/YuanGongND/ltu/blob/main/src/ltu/hf-dev/transformers-main/src/transformers/models/llama/modeling_llama.py) and [For LTU-AS](https://github.com/YuanGongND/ltu/blob/main/src/ltu_as/hf-dev/transformers-main/src/transformers/models/llama/modeling_llama.py) with the 13B version ones, which can be downloaded with the following links.
 
 **LTU-13B**: [[Download Link]](https://www.dropbox.com/scl/fo/pik0pubn1qg7q0rorkn3b/h?rlkey=x83qhk4mpwgrgns0e4rholcsr&dl=0)
 
