@@ -318,7 +318,7 @@ Map: 100%|███████████████████████�
 
 For LTU, it is simple, you just need to replace `--data_path '../../../openaqa/data/openaqa_toy_relative.json'` in `finetune_toy.sh` to your own data. Note please make sure your own audios are 16kHz, absolute paths are encouraged, we use relative paths just for simple one-click sample. 
 
-For LTU-AS, it is a bit more complex, our script does not load raw audio, but pre-extracted Whisper features, so you would also need to first extract Whisper features for your own audio, and then change the code in the HF transformer package to point to your dir for Whisper feature. For how to extract whisper features, see [**[here]**](https://github.com/YuanGongND/ltu/blob/main/src/ltu_as/extract_whisper_feature.py).
+For LTU-AS, it is a bit more complex, our script does not load raw audio, but pre-extracted Whisper features, so you would also need to first extract Whisper features for your own audio, and then change the code in the HF transformer package to point to your dir for Whisper feature (basically need to change [[these lines of code]](https://github.com/YuanGongND/ltu/blob/6869e4780d332b5758662091bad1c69daa572ca9/src/ltu_as/hf-dev/transformers-main/src/transformers/data/data_collator.py#L561C9-L571)). For how to extract whisper features, see [**[here]**](https://github.com/YuanGongND/ltu/blob/main/src/ltu_as/extract_whisper_feature.py).
 
 ## Reproduce LTU and LTU-AS Training
 
