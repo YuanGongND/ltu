@@ -37,7 +37,9 @@ Please try the interactive demos to see how good they are!
 
 **LTU (First Generation, Only Supports Audio):**
 
-**[[Paper]](https://arxiv.org/abs/2305.10790)**  **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/LTU)**
+*LTU was accepted at ICLR 2024. See you in Vienna!*
+
+**[[Paper]](https://openreview.net/pdf?id=nBZBPXdJlC)**  **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/LTU)** **[[ICLR Peer Review]](https://openreview.net/forum?id=nBZBPXdJlC)**
 
 **Authors:** [Yuan Gong](https://yuangongnd.github.io/), [Hongyin Luo](https://luohongyin.github.io/), [Alexander H. Liu](https://alexander-h-liu.github.io/), [Leonid Karlinsky](https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/), and [James Glass](https://people.csail.mit.edu/jrg/) (MIT & MIT-IBM Watson AI Lab)
 
@@ -57,7 +59,7 @@ Please try the interactive demos to see how good they are!
 
 *LTU-AS was accepted at ASRU 2023 (top 3% paper). See you in Taipei!*
 
-**[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** **[[ASRU Peer Review]](https://github.com/YuanGongND/ltu/tree/main/asru_review)** **[[Compare LTU-1 and LTU-AS]](https://huggingface.co/spaces/yuangongfdu/LTU-Compare)**
+**[[Paper]](https://arxiv.org/pdf/2309.14405.pdf)** **[[HuggingFace Space]](https://huggingface.co/spaces/yuangongfdu/ltu-2)** **[[ASRU Peer Review]](https://github.com/YuanGongND/ltu/tree/main/asru_review)**
 
 **Authors:** [Yuan Gong](https://yuangongnd.github.io/), [Alexander H. Liu](https://alexander-h-liu.github.io/), [Hongyin Luo](https://luohongyin.github.io/), [Leonid Karlinsky](https://mitibmwatsonailab.mit.edu/people/leonid-karlinsky/), and [James Glass](https://people.csail.mit.edu/jrg/) (MIT & MIT-IBM Watson AI Lab)
 
