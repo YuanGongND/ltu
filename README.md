@@ -459,7 +459,7 @@ If you have a question about the code, please create an issue.
 
 For LTU/LTU-AS training, we use 4 X A6000 (4 X 48GB=196GB VRAM). The code can be run on 1 X A6000 (or similar GPUs). 
 
-To run on smaller GPUs, turn on model parallelism, we were able to run it on 4 X A5000 (4 X 24GB = 96GB), we provide sample script for low-resource training for [LTU](https://github.com/YuanGongND/ltu/blob/main/src/ltu/train_script/finetune_toy_low_resource.sh) and [LTU-AS](https://github.com/YuanGongND/ltu/blob/main/src/ltu_as/train_script/finetune_toy_low_resource.sh)). Please note they are slower than normal training scripts.
+To train/finetuning on smaller GPUs, turn on model parallelism, we were able to run it on 4 X A5000 (4 X 24GB = 96GB), we provide sample script for low-resource training for [LTU](https://github.com/YuanGongND/ltu/blob/main/src/ltu/train_script/finetune_toy_low_resource.sh) and [LTU-AS](https://github.com/YuanGongND/ltu/blob/main/src/ltu_as/train_script/finetune_toy_low_resource.sh)). Please note they are slower than normal training scripts.
 
 For inference, the minimal would be 2 X TitanX (2 X 12GB = 24GB) for LTU and 4 X TitanX (4 X 12GB = 48GB) for LTU-AS (as Whisper takes some memory). However, you can run inference on CPUs.
 
