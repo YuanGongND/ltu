@@ -37,6 +37,31 @@ Including Stage 1/2/3/4 checkpoints. Training arguments and loss logs are provid
 
 Including Stage 1/2/3 checkpoints, for the final stage3 checkpoint, provide v1 and v2 (with more joint audio and speech training data) checkpoints. Training arguments and loss logs are provided to help reproduction. 
 
+**Where are the loss logs?** Click one of above links, in folders named "checkpoint-xxxx", find files called `trainer_state.json`, you should see something like:
+
+``` 
+"log_history": [
+    {
+      "epoch": 0.0,
+      "learning_rate": 0.0001,
+      "loss": 8.7039,
+      "step": 10
+    },
+    {
+      "epoch": 0.0,
+      "learning_rate": 0.0002,
+      "loss": 5.5624,
+      "step": 20
+    },
+    {
+      "epoch": 0.01,
+      "learning_rate": 0.0003,
+      "loss": 4.1076,
+      "step": 30
+```
+
+That is the actual log loss. We released the logs for all stages for both LTU and LTU-AS to help reproduction.
+
 **2. LLaMA 13B Models (including 13B model script)**
 
 Our papers mostly focus on LLaMA-7B models, but we provide LLaMA-13B checkpoints. You would need to replace the model script [For LTU](https://github.com/YuanGongND/ltu/blob/main/src/ltu/hf-dev/transformers-main/src/transformers/models/llama/modeling_llama.py) and [For LTU-AS](https://github.com/YuanGongND/ltu/blob/main/src/ltu_as/hf-dev/transformers-main/src/transformers/models/llama/modeling_llama.py) with the 13B version ones, which can be downloaded with the following links.
