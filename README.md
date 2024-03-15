@@ -159,6 +159,7 @@ For LTU-AS:
 cd /ltu-main/src/ltu_as
 conda create --name venv_ltu_as python=3.10
 conda activate venv_ltu_as
+pip install -r requirements.txt
 # install customized hugging face transformer, the original transformer won't work
 pip install -e hf-dev/transformers-main
 # install customized hugging face peft, original peft won't work
