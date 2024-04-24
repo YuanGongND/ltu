@@ -5,6 +5,7 @@
 # @Email   : yuangong@mit.edu
 # @File    : eval_llm.py
 
+# install this package: https://github.com/audio-captioning/caption-evaluation-tools and place this script in the same dir
 # evaluate the llm output
 
 import os
